@@ -1,6 +1,20 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+Uninstall Plugin Alert warns admins before they uninstall a plugin that is still being used by published apps, so apps don't break by accident. Works with Joget DX 9.1 or later.
+
+## Features
+* Warns you when you uninstall a plugin that published apps are using.
+* Lets you check which apps use a plugin at any time, without uninstalling it.
+* Links each app in the list straight to its builder page so you can review it first.
+* Only available to admin users.
+
+## How to Use
+1. Install the plugin. No configuration is needed.
+2. To uninstall safely: go to **Settings > Manage Plugins**, select the plugin(s) and click **Uninstall Plugin**. If any published apps use them, a confirmation dialog lists those apps. Click an app name to open it in the builder, then choose to continue or cancel.
+3. To just check usage: in **Manage Plugins**, click a plugin to open its details, then click a plugin in the list to see which published apps use it.
+
+## How It Works
+The plugin looks at the plugins included in each published app and matches them against the plugin you selected. The match is done by plugin name, so a different version of the same plugin is still counted as in use. A plugin included in an app is listed even if nothing in that app actually uses it.
 
 # Getting Help
 
